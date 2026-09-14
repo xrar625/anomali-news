@@ -15,14 +15,14 @@
     <meta name="geo.placename" content="Jakarta">
 
     <!-- Canonical Wajib Mengarah ke Versi Non-AMP -->
-    <link rel="canonical" href="https://xrar625.github.io/anomali-news/">
+    <link rel="canonical" href="https://xrar625.github.io/anomali-news/review-samsung-s26-ultrareview-samsung-s26-ultra">
     <link rel="shortcut icon" href="https://via.placeholder.com/32x32.png?text=AN" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="https://via.placeholder.com/32x32.png?text=AN">
     <link rel="apple-touch-icon" sizes="180x180" href="https://via.placeholder.com/180x180.png?text=AN">
 
     <!-- Open Graph Tags -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://xrar625.github.io/anomali-news/">
+    <meta property="og:url" content="https://xrar625.github.io/anomali-news/review-samsung-s26-ultrareview-samsung-s26-ultra">
     <meta property="og:site_name" content="Anomali News">
     <meta property="og:title" content="Review Samsung Galaxy S26 Ultra: Kamera 300MP & AI Makin Cerdas">
     <meta property="og:description" content="Ulasan mendalam Samsung Galaxy S26 Ultra. Apakah layak dibeli di tahun 2026?">
@@ -49,14 +49,14 @@
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Anomali News",
-            "url": "https://xrar625.github.io/anomali-news/"
+            "url": "https://xrar625.github.io/anomali-news/review-samsung-s26-ultra"
         },
         {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://xrar625.github.io/anomali-news/" },
-                { "@type": "ListItem", "position": 2, "name": "Tekno", "item": "https://xrar625.github.io/anomali-news/#tekno" },
+                { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://xrar625.github.io/anomali-news/review-samsung-s26-ultra" },
+                { "@type": "ListItem", "position": 2, "name": "Tekno", "item": "https://xrar625.github.io/anomali-news/review-samsung-s26-ultra#tekno" },
                 { "@type": "ListItem", "position": 3, "name": "Review Samsung S26 Ultra" }
             ]
         },
@@ -65,7 +65,7 @@
             "@type": "NewsArticle",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://xrar625.github.io/anomali-news/"
+                "@id": "https://xrar625.github.io/anomali-news/review-samsung-s26-ultra"
             },
             "headline": "Review Samsung Galaxy S26 Ultra: Kamera 300MP & AI Makin Cerdas",
             "image": [
@@ -161,12 +161,12 @@
 
     <!-- Header Anomali News -->
     <header>
-        <a href="https://xrar625.github.io/anomali-news/" class="logo">Anomali<span>News</span></a>
+        <a href="https://xrar625.github.io/anomali-news/review-samsung-s26-ultra" class="logo">Anomali<span>News</span></a>
     </header>
 
     <div class="container">
         <div class="breadcrumb">
-            <a href="https://xrar625.github.io/anomali-news/">Beranda</a> &raquo; Tekno &raquo; Gadget
+            <a href="https://xrar625.github.io/anomali-news/review-samsung-s26-ultra">Beranda</a> &raquo; Tekno &raquo; Gadget
         </div>
         
         <h1 class="title">Review Samsung Galaxy S26 Ultra: Kamera 300MP & AI Makin Cerdas</h1>
