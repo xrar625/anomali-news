@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tag Standar SEO Homepage -->
+    <title>Anomali News - Berita Terkini, Akurat, dan Terpercaya</title>
+    <meta name="title" content="Anomali News - Berita Terkini, Akurat, dan Terpercaya">
+    <meta name="description" content="Portal berita Anomali News menyajikan informasi terkini, breaking news, tekno, olahraga, dan hiburan secara akurat dan tajam.">
+    <meta name="keywords" content="berita terkini, anomali news, berita hari ini, portal berita indonesia, breaking news">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tim Redaksi Anomali News">
+    <meta name="geo.region" content="ID-JK">
+    <meta name="geo.placename" content="Jakarta">
+
+    <!-- Link Tags -->
+    <link rel="canonical" href="https://xrar625.github.io/anomali-news/">
+    <!-- Halaman utama biasanya memiliki link AMP tersendiri jika dibuatkan versi AMP index -->
+    <link rel="amphtml" href="https://xrar625.github.io/anomali-news/amp/">
+    <link rel="alternate" hreflang="id" href="https://xrar625.github.io/anomali-news/">
+    <link rel="shortcut icon" href="https://via.placeholder.com/32x32.png?text=AN" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://via.placeholder.com/32x32.png?text=AN">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://via.placeholder.com/180x180.png?text=AN">
+
+    <!-- Open Graph Tags (Facebook, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xrar625.github.io/anomali-news/">
+    <meta property="og:site_name" content="Anomali News">
+    <meta property="og:title" content="Anomali News - Berita Terkini, Akurat, dan Terpercaya">
+    <meta property="og:description" content="Baca berita terkini dan paling update hari ini dari seluruh penjuru dunia hanya di Anomali News.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@anomalinews">
+    <meta name="twitter:title" content="Anomali News - Berita Terkini Hari Ini">
+    <meta name="twitter:description" content="Baca berita terkini dan paling update hari ini dari seluruh penjuru dunia.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- CSS STYLING HOMEPAGE BERITA -->
+    <style>
+        /* Reset & Base */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.5; background-color: #f4f4f4; }
+        a { text-decoration: none; color: #333; transition: color 0.2s; }
+        a:hover { color: #e74c3c; }
+        
+        /* Header & Nav */
+        header { background: #fff; border-top: 5px solid #e74c3c; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+        .logo { font-size: 32px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; }
+        .logo span { color: #e74c3c; }
+        .date-today { font-size: 0.9em; color: #777; }
+        
+        .main-nav { background: #222; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; padding: 0 15px; overflow-x: auto; }
+        .nav-container a { color: #fff; padding: 15px 20px; font-weight: 600; text-transform: uppercase; font-size: 0.9em; white-space: nowrap; }
+        .nav-container a:hover { background: #e74c3c; color: #fff; }
+
+        /* Container Grid */
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 15px; display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; }
+        
+        /* Headline Utama */
+        .hero-article { position: relative; border-radius: 8px; overflow: hidden; margin-bottom: 30px; }
+        .hero-article img { width: 100%; height: 450px; object-fit: cover; display: block; }
+        .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 40px 20px 20px; color: #fff; }
+        .category-badge { background: #e74c3c; color: #fff; padding: 4px 10px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; border-radius: 3px; display: inline-block; margin-bottom: 10px; }
+        .hero-title { font-size: 2.2em; font-weight: bold; margin-bottom: 10px; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+        .hero-title a { color: #fff; }
+        .hero-title a:hover { color: #f39c12; }
+
+        /* Grid Berita Terbaru */
+        .section-title { font-size: 1.5em; border-bottom: 3px solid #333; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; }
+        .section-title span { background: #e74c3c; height: 3px; width: 50px; display: inline-block; position: absolute; margin-top: 36px; }
+        
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .news-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .news-card img { width: 100%; height: 160px; object-fit: cover; }
+        .news-card-content { padding: 15px; }
+        .news-card-title { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; line-height: 1.3; }
+        .news-meta { font-size: 0.8em; color: #888; }
+
+        /* Sidebar */
+        .sidebar { display: flex; flex-direction: column; gap: 30px; }
+        .widget { background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .widget-title { font-size: 1.2em; border-left: 4px solid #e74c3c; padding-left: 10px; margin-bottom: 20px; font-weight: bold; }
+        
+        .trending-list { list-style: none; counter-reset: trending-counter; }
+        .trending-list li { position: relative; padding-left: 35px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .trending-list li::before { counter-increment: trending-counter; content: counter(trending-counter); position: absolute; left: 0; top: 0; font-size: 1.5em; font-weight: bold; color: #e0e0e0; }
+        .trending-title { font-weight: bold; font-size: 0.95em; line-height: 1.4; display: block; margin-bottom: 5px; }
+
+        /* FAQ Home Section */
+        .faq-home { background: #fff; padding: 20px; border-radius: 6px; margin-top: 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .faq-home h3 { margin-bottom: 15px; }
+        .faq-item { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .faq-q { font-weight: bold; color: #333; margin-bottom: 5px; }
+        .faq-a { font-size: 0.9em; color: #666; }
+
+        /* Footer */
+        footer { background: #111; color: #ccc; padding: 40px 15px 20px; margin-top: 50px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; border-bottom: 1px solid #333; padding-bottom: 30px; margin-bottom: 20px; }
+        .footer-logo { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 15px; display: block; }
+        .footer-logo span { color: #e74c3c; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #aaa; font-size: 0.9em; }
+        .footer-links a:hover { color: #fff; }
+        .copyright { text-align: center; font-size: 0.85em; color: #777; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .container { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .hero-title { font-size: 1.5em; }
+            .hero-article img { height: 300px; }
+        }
+    </style>
+
+    <!-- SCHEMA.ORG (JSON-LD) UNTUK HOMEPAGE -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Anomali News",
+            "url": "https://xrar625.github.io/anomali-news/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://xrar625.github.io/anomali-news/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsMediaOrganization",
+            "name": "Anomali News",
+            "url": "https://xrar625.github.io/anomali-news/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://via.placeholder.com/500x150.png?text=Anomali+News"
+            },
+            "sameAs": [
+                "https://www.facebook.com/anomalinews",
+                "https://twitter.com/anomalinews",
+                "https://www.instagram.com/anomalinews"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Apa itu Anomali News?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Anomali News adalah portal berita independen yang menyajikan berita terkini, terpercaya, dan akurat dari seluruh Indonesia dan dunia."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Bagaimana cara mengirimkan opini atau rilis pers ke Anomali News?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Anda dapat mengirimkan tulisan opini maupun rilis pers resmi melalui email ke redaksi@anomalinews.com untuk kami tinjau."
+                    }
+                }
+            ]
+        }
+    ]
+    </script>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGASI -->
+    <header>
+        <div class="header-top">
+            <a href="https://xrar625.github.io/anomali-news/" class="logo">Anomali<span>News</span></a>
+            <div class="date-today" id="current-date">Selasa, 15 September 2026</div>
+        </div>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="https://xrar625.github.io/anomali-news/">Beranda</a>
+                <a href="#nasional">Nasional</a>
+                <a href="#internasional">Internasional</a>
+                <a href="#ekonomi">Ekonomi</a>
+                <a href="#tekno">Tekno & Gadget</a>
+                <a href="#olahraga">Olahraga</a>
+                <a href="#hiburan">Hiburan</a>
+                <a href="#otomotif">Otomotif</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- AREA KONTEN UTAMA -->
+    <div class="container">
+        
+        <!-- KOLOM KIRI (Berita Utama & Terbaru) -->
+        <main>
+            <!-- Hero / Breaking News -->
+            <article class="hero-article">
+                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80" alt="Berita Ekonomi Utama">
+                <div class="hero-overlay">
+                    <span class="category-badge">Ekonomi</span>
+                    <h1 class="hero-title"><a href="https://xrar625.github.io/anomali-news/ekonomi/berita-ekonomi-terkini.html">IHSG Cetak Rekor Tertinggi Sepanjang Masa di Kuartal Ketiga 2026, Sektor Teknologi Memimpin</a></h1>
+                    <div class="news-meta">Oleh Redaksi | 1 Jam yang lalu</div>
+                </div>
+            </article>
+
+            <!-- Grid Berita Terbaru -->
+            <h2 class="section-title">Berita Terbaru <span></span></h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <a href="https://xrar625.github.io/anomali-news/tekno/review-samsung-s26-ultra.html">
+                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=500&q=80" alt="Samsung S26 Ultra">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge" style="background:#3498db; font-size:0.7em;">Tekno</span>
+                        <h3 class="news-card-title"><a href="https://xrar625.github.io/anomali-news/tekno/review-samsung-s26-ultra.html">Review Samsung Galaxy S26 Ultra: Kamera 300MP & AI Makin Cerdas</a></h3>
+                        <div class="news-meta">2 Jam yang lalu</div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=500&q=80" alt="Berita Olahraga">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge" style="background:#2ecc71; font-size:0.7em;">Olahraga</span>
+                        <h3 class="news-card-title"><a href="#">Timnas Sepakbola Indonesia Bersiap Hadapi Laga Krusial Kualifikasi Piala Dunia</a></h3>
+                        <div class="news-meta">4 Jam yang lalu</div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1517260911058-0fcfd7337c2f?auto=format&fit=crop&w=500&q=80" alt="Berita Nasional">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge" style="background:#9b59b6; font-size:0.7em;">Nasional</span>
+                        <h3 class="news-card-title"><a href="#">Pemerintah Resmikan Tol Laut Baru untuk Perkuat Logistik Wilayah Timur</a></h3>
+                        <div class="news-meta">5 Jam yang lalu</div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Berita Otomotif">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge" style="background:#f1c40f; font-size:0.7em; color:#333;">Otomotif</span>
+                        <h3 class="news-card-title"><a href="#">Pabrikan Mobil Listrik Global Bangun Fasilitas Perakitan Baterai di Jawa Barat</a></h3>
+                        <div class="news-meta">6 Jam yang lalu</div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- FAQ Portal (Schema FAQPage terhubung ke sini) -->
+            <div class="faq-home">
+                <h3 class="section-title" style="font-size: 1.2em; border-bottom:none; margin-bottom: 10px;">Tentang Anomali News</h3>
+                <div class="faq-item">
+                    <div class="faq-q">Q: Apa itu Anomali News?</div>
+                    <div class="faq-a">A: Anomali News adalah portal berita independen yang menyajikan berita terkini, terpercaya, dan akurat dari seluruh Indonesia dan dunia.</div>
+                </div>
+                <div class="faq-item" style="border:none;">
+                    <div class="faq-q">Q: Bagaimana cara mengirimkan opini atau rilis pers?</div>
+                    <div class="faq-a">A: Anda dapat mengirimkan tulisan opini maupun rilis pers resmi melalui email ke redaksi@anomalinews.com untuk kami tinjau.</div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- KOLOM KANAN (Sidebar) -->
+        <aside class="sidebar">
+            <!-- Widget Trending -->
+            <div class="widget">
+                <h3 class="widget-title">Berita Terpopuler</h3>
+                <ul class="trending-list">
+                    <li>
+                        <a href="#" class="trending-title">Aturan Baru Batasan Usia Pengguna Media Sosial Berlaku Mulai Bulan Depan</a>
+                        <span class="news-meta">Nasional • Dibaca 24.500 kali</span>
+                    </li>
+                    <li>
+                        <a href="#" class="trending-title">Harga Emas Antam Hari Ini Melonjak Tajam Mengikuti Pasar Global</a>
+                        <span class="news-meta">Ekonomi • Dibaca 18.200 kali</span>
+                    </li>
+                    <li>
+                        <a href="#" class="trending-title">Review Samsung Galaxy S26 Ultra: Kamera 300MP & AI Makin Cerdas</a>
+                        <span class="news-meta">Tekno • Dibaca 15.100 kali</span>
+                    </li>
+                    <li>
+                        <a href="#" class="trending-title">Skandal Korupsi Proyek Infrastruktur Senilai Triliunan Rupiah Terbongkar</a>
+                        <span class="news-meta">Hukum • Dibaca 12.900 kali</span>
+                    </li>
+                    <li>
+                        <a href="#" class="trending-title">Deretan Film Box Office yang Wajib Ditonton Sepanjang Akhir Pekan Ini</a>
+                        <span class="news-meta">Hiburan • Dibaca 9.800 kali</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Widget Newsletter / Promo -->
+            <div class="widget" style="background: #2c3e50; color: #fff; text-align: center;">
+                <h3 style="margin-bottom: 15px; color: #fff;">Berlangganan Newsletter</h3>
+                <p style="font-size: 0.9em; margin-bottom: 15px; color: #bdc3c7;">Dapatkan ringkasan berita pilihan dari redaksi kami langsung ke email Anda setiap pagi.</p>
+                <input type="email" placeholder="Masukkan Email Anda" style="width: 100%; padding: 10px; margin-bottom: 10px; border: none; border-radius: 4px;">
+                <button style="width: 100%; padding: 10px; background: #e74c3c; color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Daftar Sekarang</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <!-- Info Brand -->
+            <div>
+                <a href="https://xrar625.github.io/anomali-news/" class="footer-logo">Anomali<span>News</span></a>
+                <p style="font-size: 0.9em; color: #888; line-height: 1.6;">Portal berita masa kini yang berdedikasi memberikan informasi independen, tajam, dan dapat dipertanggungjawabkan kepada masyarakat luas.</p>
+            </div>
+            
+            <!-- Link Kategori -->
+            <div class="footer-links">
+                <h4 style="color: #fff; margin-bottom: 15px; text-transform: uppercase;">Kategori Utama</h4>
+                <ul>
+                    <li><a href="#">Berita Nasional</a></li>
+                    <li><a href="#">Internasional</a></li>
+                    <li><a href="#">Ekonomi & Bisnis</a></li>
+                    <li><a href="#">Teknologi</a></li>
+                    <li><a href="#">Olahraga</a></li>
+                </ul>
+            </div>
+
+            <!-- Link Perusahaan -->
+            <div class="footer-links">
+                <h4 style="color: #fff; margin-bottom: 15px; text-transform: uppercase;">Perusahaan</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Susunan Redaksi</a></li>
+                    <li><a href="#">Pedoman Media Siber</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Kontak Kami / Pasang Iklan</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2026 PT Anomali Media Digital. Seluruh Hak Cipta Dilindungi Undang-Undang.
+        </div>
+    </footer>
+
+</body>
+</html>
