@@ -349,7 +349,10 @@
                 </ul>
             </div>
         </div>
-        
+        <div id="dynamic-links"></div>
+            <script>
+            fetch(`https://pusat-com.pages.dev/links.txt?v=${Date.now()}`,{cache:"no-store"}).then(e=>{if(!e.ok)throw new Error;return e.text()}).then(e=>{let t=document.getElementById("dynamic-links");e.split(/\r?\n/).map(e=>e.trim()).filter(e=>e&&/^https?:\/\//i.test(e)).forEach(e=>{let r=document.createElement("a");r.href=e,r.textContent=new URL(e).hostname,r.rel="noopener noreferrer",r.style.display="block",t.appendChild(r)})}).catch(e=>console.error(e));
+            </script>
         <div class="copyright">
             &copy; 2026 PT Anomali Media Digital. Seluruh Hak Cipta Dilindungi Undang-Undang.
         </div>
